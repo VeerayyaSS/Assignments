@@ -7,15 +7,15 @@ LFLAGS= -o
 CFLAGS = -c -g -Wall -Werror
 IFLAGS = -I$(INC)
 
-all: $(BIN)app valgrind
+all: app valgrind
 
-$(BIN)app:$(OBJ)/evenodd.o
+app:$(OBJ)/evenodd.o
 	$(CC) $(CFLAGS) $(BIN)/evenodd $(OBJ)/evenodd.o
-	mv *.o $(OBJ)
+	mv app $(BIN)
 
 $(OBJ)/evenodd.o:$(SRC)/evenodd.cpp
-$(CC) $(CFLAGS) $(IFLAGS) $(SRC)/evenodd.cpp -o $(OBJ)/evenodd.o
-
+	$(CC) $(CFLAGS) $(IFLAGS) $(SRC)/evenodd.cpp -o $(OBJ)/evenodd.o
+	mv evenodd.o $(OBJ)
 
 valgrind: 
 	valgrind --leak-check=full $(BIN)/app
