@@ -1,0 +1,7 @@
+Writing a sample code
+For parent Local variable value=5
+ and global variable value=10
+Code common for both parent process and child process
+Writing a sample code
+For child Local variable value=5
+ and global variable value=10

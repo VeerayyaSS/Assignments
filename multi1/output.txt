@@ -1,0 +1,6 @@
+3.Will the order of execution be same always or could be different? Will it impact the output?
+Yes, order of execution depends on which process gets the first thread. Hence it will impact the output as to which process prints first.
+
+4.Why the first printf() statement will be executed only by parent process and not by child process?
+Because child process doesn’t exist until then, hence parent process only will print it.
+
