@@ -1,0 +1,8 @@
+Child process starts
+Child process ID: 597
+child parent pid: 596
+Enter 2 lines
+veera karna
+Signaled: 2
+killed PID: 596
+User defined signal 1
